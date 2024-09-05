@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schicht Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Logo hinzugefügt -->
+        <div class="logo-container">
+            <img src="https://lh6.googleusercontent.com/6RP05qzAw0vbux4h3ssoGpI5LCW3hMdAlZpA_6enFuqhyB87av80IKj62tzGHfXS-heHTgwydkMuQljRTsxHUlWaDaJst8sTu451tD4fHZpFMFvnHlzYIBU8B3Ssd5UMVhWmn7TItOwidcapww" alt="Logo" class="logo">
+        </div>
+        
+        <h1>Schicht Tool</h1>
+        <h2>Posten Einteilung Abschnitt C</h2>
+        
+        <!-- Passwort Eingabe -->
+        <div class="password-section">
+            <label for="passwordInput">Passwort:</label>
+            <input type="password" id="passwordInput" placeholder="Passwort eingeben">
+            <button onclick="verifyPassword()">Bearbeitung freischalten</button>
+        </div>
+        
+        <!-- Nutzer hinzufügen -->
+        <div class="input-section">
+            <label for="nutzerName">Nutzername:</label>
+            <input type="text" id="nutzerName" placeholder="Nutzernamen eingeben" disabled>
+            <button id="addButton" onclick="addNutzer()" disabled>Nutzer hinzufügen</button>
+        </div>
+        
+        <!-- Nutzerliste -->
+        <div class="nutzer-list-section">
+            <h2>Nutzerliste:</h2>
+            <select id="nutzerList" size="5" disabled></select>
+            <button id="removeButton" onclick="removeNutzer()" disabled>Nutzer entfernen</button>
+        </div>
+        
+        <!-- Posten Auswahl -->
+        <div class="posten-section">
+            <h2>Wähle einen Posten:</h2>
+            <select id="postenSelect" disabled>
+                <option value="Posten 1">Posten 1</option>
+                <option value="Posten 2">Posten 2</option>
+                <option value="Posten 3">Posten 3</option>
+                <option value="Posten 4">Posten 4</option>
+                <option value="Springer">Springer</option>
+                <option value="Pause">Pause</option>
+            </select>
+            <button id="assignButton" onclick="assignNutzer()" disabled>Zuweisen</button>
+            <button id="changeButton" onclick="changePosten()" disabled>Posten ändern</button>
+        </div>
+        
+        <!-- Zuordnungen -->
+        <div class="zuordnung-section">
+            <h2>Zuordnungen:</h2>
+            <div id="zuordnungen"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
